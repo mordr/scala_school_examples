@@ -15,11 +15,11 @@ object ScalaSchool {
         // val map = Map.empty[String,Int]
         val map = 
         scala.io.Source.fromFile(fileName)
-        	.getLines
-        	.flatMap(_.split("\\W+"))
-        	.foldLeft(Map.empty[String, Int]) {
-        		(accMap, word) => accMap += (word -> (accMap.getOrElse(word,0) + 1))
-        	}
+        .getLines
+        .flatMap(_.split("\\W+"))
+        .foldLeft(Map.empty[String, Int]) {
+        	(accMap, word) => accMap += (word -> (accMap.getOrElse(word,0) + 1))
+        }
         // .foreach {
         // 	word => {
         // 		var count = map.getOrElse(word,0) + 1
