@@ -26,7 +26,7 @@ object ScalaSchool {
         // 		map += (word -> count)
         // 	}
         // }
-        	println("word count:\n" + map.mkString("\n"))
+       	println("word count:\n" + map.mkString("\n"))
         map
     }
 
