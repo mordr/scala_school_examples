@@ -1,5 +1,3 @@
-import scala.collection.immutable.Stream
-
 object ScalaSchool {
 
     def fib: Stream[Int] = {
