@@ -28,6 +28,13 @@ object ScalaSchool {
         println("tuple list " + tupleList)
         val tuplesPair = tuplePair(tupleList)
         println(tuplesPair)
+    
+    
+        println("-using combinations-")
+        println("numbers -")
+        numbers.combinations(2).foreach(println)
+        println("tuples -")
+        tupleList.combinations(2).foreach(println)
     }
 
 }
