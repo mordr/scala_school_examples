@@ -31,10 +31,23 @@ object ScalaSchool {
     
     
         println("-using combinations-")
-        println("numbers -")
+        
+        println("- numbers -")
         numbers.combinations(2).foreach(println)
-        println("tuples -")
+        println("- tuples -")
         tupleList.combinations(2).foreach(println)
+        
+        println("-ordered pair-")
+        val numWithIdx = numbers.zipWithIndex
+        val ordPairs = numWithIdx.flatMap(x=>numWithIdx.map(y=>(x,y))).collect {
+            case(x, y) if x._2 < y._2 => (x._1, y._1)
+        } 
+        println(ordPairs)
+        println("-using existing tuplePair-")
+        val tmp = tuplePair(numWithIdx)
+        val altOrdPairs = tmp.collect {
+            case(x, y) if x._2 < y._2 => (x._1, y._1)
+        }
+        println(altOrdPairs)
     }
-
 }
